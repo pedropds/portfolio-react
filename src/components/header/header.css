@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.linkedin-image-container {
+  position: relative;
+  width: 50px; 
+  height: 50px; 
+}
+
+.linkedin-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.theme-toggle {
+  transition: transform 0.5s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.right-header.move-in {
+  transform: translateX(0);
+  opacity: 0.8; 
+}
+
+.header-element {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  display: block; /* Prevents inline spacing issues */
+}
