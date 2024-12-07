@@ -15,3 +15,14 @@
   display: flex;
   flex-direction: column;
 }
+
+@font-face {
+  font-family: 'Arcade';
+  src: url('../public/fonts/red-alert.ttf') format('truetype'); /* Additional fallback */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arcade', sans-serif; /* Specify the custom font, with a fallback */
+}

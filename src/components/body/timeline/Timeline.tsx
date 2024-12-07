@@ -25,9 +25,15 @@ export const MyTimeline = ({ items, isDarkTheme }: TimelineProps) => {
             <h3 className={`timeline-title ${isDarkTheme ? "dark" : ""}`}>
               {item.title}
             </h3>
-            <p className={`timeline-description ${isDarkTheme ? "dark" : ""}`}>
-              {item.description}
-            </p>
+            {/* Split the description into paragraphs */}
+            {item.description.split("\n").map((paragraph, idx) => (
+              <p
+                key={idx}
+                className={`timeline-description ${isDarkTheme ? "dark" : ""}`}
+              >
+                {paragraph.trim()}
+              </p>
+            ))}
           </div>
         </div>
       ))}
