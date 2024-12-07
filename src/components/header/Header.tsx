@@ -8,7 +8,7 @@ import LightThemeColor from "../../images/color-theme-light.svg";
 
 interface HeaderProps {
   isDarkTheme: boolean;
-  toggleTheme: () => void; // Function to toggle the theme
+  toggleTheme: () => void;
 }
 
 export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
@@ -24,8 +24,8 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   }, []);
 
   const handleToggle = () => {
-    toggleTheme(); // Toggle theme in App
-    setIsRotated((prevRotated) => !prevRotated); // Toggle rotation of the button
+    toggleTheme();
+    setIsRotated((prevRotated) => !prevRotated);
   };
 
   return (
