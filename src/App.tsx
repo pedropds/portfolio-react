@@ -4,15 +4,32 @@ import { Header } from "./components/header/header";
 import { Body } from "./components/body/body";
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false); // Theme state
+  // Get query parameter to set initial theme
+  const queryParams = new URLSearchParams(window.location.search);
+  const isDarkThemeUrl = queryParams.get("isDarkTheme");
 
+  // Set initial state based on the URL query parameter
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(
+    isDarkThemeUrl === "true"
+  );
+
+  // Toggle theme and update URL query parameter
   const toggleTheme = () => {
-    setIsDarkTheme((prevTheme) => !prevTheme); // Toggle the theme state
+    setIsDarkTheme((prevTheme) => {
+      const newTheme = !prevTheme;
+
+      // Update the URL query parameter to reflect the new theme state
+      const url = new URL(window.location.href);
+      url.searchParams.set("isDarkTheme", newTheme ? "true" : "false");
+      window.history.pushState({}, "", url.toString()); // Update the URL without reloading the page
+
+      return newTheme;
+    });
   };
 
   return (
     <div className={`App ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
-      {/* Pass only theme state to Header */}
+      {/* Pass only theme state to Header and Body */}
       <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       <Body isDarkTheme={isDarkTheme} />
     </div>

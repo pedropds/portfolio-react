@@ -3,7 +3,8 @@ import "./header.css";
 
 import LinkedInWhite from "../../images/linkedin-white.svg";
 import LinkedInBlack from "../../images/linkedin-black.svg";
-import ColorTheme from "../../images/color-theme.svg";
+import DarkThemeColor from "../../images/color-theme-dark.svg";
+import LightThemeColor from "../../images/color-theme-light.svg";
 
 interface HeaderProps {
   isDarkTheme: boolean;
@@ -58,7 +59,7 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
           className={`header-element theme-toggle ${
             isRotated ? "rotated" : ""
           }`}
-          src={ColorTheme}
+          src={isDarkTheme ? LightThemeColor : DarkThemeColor}
           alt="ColorMode"
           onClick={handleToggle} // Add click handler
         />

@@ -6,10 +6,12 @@
 }
 
 .App.dark-theme {
-  background-color: #2E3B4E;
+  background-color: #1e293b;
 }
 
 .body {
   flex-grow: 1; /* Makes sure Body takes up the remaining space */
   height: 100%; /* Optional: Ensure Body takes the full height of the container */
+  display: flex;
+  flex-direction: column;
 }

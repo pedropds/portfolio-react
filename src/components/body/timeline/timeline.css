@@ -1,0 +1,160 @@
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px 0;
+  max-width: 600px;
+  transition: color 0.5s ease; /* Transition for background color */
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards; /* Fade in the timeline container */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px; /* Space between items */
+  position: relative;
+  padding-left: 40px;
+  opacity: 0; /* Start hidden */
+  transform: translateX(20px); /* Start from the right */
+  animation: slideInFromRight 0.5s forwards;
+  animation-delay: 0.2s; /* Default delay for each item */
+}
+
+/* Timeline Item Animation (Content sliding in from right) */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Start from the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+/* Timeline Item with delay (sequential animations) */
+.timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.timeline-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.timeline-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.timeline-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Timeline Point */
+.timeline-point {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #1e293b;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.1s; /* Delay for each point */
+}
+
+.timeline-point.dark {
+  background-color: #f1f5f9;
+  box-shadow: 0 0 0 2px #1e293b;
+}
+
+/* Vertical Line */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 7px; /* Centered with the timeline point */
+  top: 20px; /* Start slightly below the timeline point */
+  bottom: -20px; /* Extends to connect the next point */
+  width: 2px;
+  background-color: #94a3b8; /* Light gray for the line */
+  z-index: 1;
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.1s; /* Delay for each line */
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #f1f5f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, box-shadow 0.6s ease, color 0.5s ease;
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start from the right */
+  animation: slideInFromRight 0.5s forwards;
+}
+
+.timeline-content.dark {
+  background: #f1f5f9;
+  color: #1e293b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Timeline Date */
+.timeline-date {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+  display: block;
+  transition: color 0.5s ease;
+}
+
+.timeline-date.dark {
+  color: #1e293b;
+}
+
+/* Timeline Title */
+.timeline-title {
+  font-size: 16px;
+  color: #e2e8f0;
+  margin: 0;
+  transition: color 0.5s ease;
+}
+
+.timeline-title.dark {
+  color: #1e293b;
+}
+
+/* Timeline Description */
+.timeline-description {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin: 4px 0 0;
+  transition: color 0.5s ease;
+}
+
+.timeline-description.dark {
+  color: #1e293b;
+}

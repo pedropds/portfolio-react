@@ -43,7 +43,7 @@
 
 .right-header.move-in {
   transform: translateX(0);
-  opacity: 0.8; 
+  opacity: 1; 
 }
 
 .header-element {
