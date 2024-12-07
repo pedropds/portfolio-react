@@ -1,6 +1,6 @@
 import React from "react";
-import "./body.css";
-import { MyTimeline } from "./timeline/timeline";
+import "./Body.css";
+import { MyTimeline } from "./timeline/Timeline";
 
 interface BodyProps {
   isDarkTheme: boolean;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./header.css";
+import "./Header.css";
 
 import LinkedInWhite from "../../images/linkedin-white.svg";
 import LinkedInBlack from "../../images/linkedin-black.svg";
