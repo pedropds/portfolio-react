@@ -1,0 +1,52 @@
+.skill-component {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.skill-list.dark-theme {
+  background-color: #1e293b;
+  color: #D3D3D3;
+}
+
+.skill-list.light-theme {
+  background-color: #D3D3D3;
+  color: #1e293b;
+}
+
+.skill-element {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  border: 0.125rem solid #1e293b;
+  color: #1e293b;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.skill-element.dark-theme {
+  border: 0.125rem solid #D3D3D3;
+  color: #D3D3D3;
+}
+
+.tooltip {
+  position: absolute;
+  top: 120%; /* Adjust this based on your design */
+  left: 50%;
+  transform: translateX(-50%); /*align to the middle of the skill component*/
+  padding: 0.5rem;
+  background-color: #1e293b;
+  color: #D3D3D3;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  z-index: 100;
+  font-size: 0.75rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.tooltip.dark-theme {
+  background-color: #D3D3D3;
+  color: #1e293b;
+}
+
+

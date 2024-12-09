@@ -53,3 +53,11 @@ export const timelineData = [
     `,
   },
 ];
+
+export const skills = [
+  {
+    name: "Java",
+    description:
+      "Most of my experience has involved Java. It's a language that has a special place in my heart, since it was the first coding language I've learned",
+  },
+];

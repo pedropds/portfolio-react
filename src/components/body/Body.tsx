@@ -1,7 +1,8 @@
 import React from "react";
 import "./Body.css";
 import { MyTimeline } from "./timeline/Timeline";
-import { timelineData } from "./BodyConsts";
+import { skills, timelineData } from "./BodyConsts";
+import { Skills } from "./skills/Skills";
 
 interface BodyProps {
   isDarkTheme: boolean;
@@ -28,6 +29,7 @@ export const Body = ({ isDarkTheme }: BodyProps) => {
         enhancing full-stack solutions using technologies like C++, TypeScript,
         JavaScript, and React.
       </span>
+      <Skills isDarkTheme={isDarkTheme} skills={skills}></Skills>
       <MyTimeline items={timelineData} isDarkTheme={isDarkTheme} />;
     </div>
   );
