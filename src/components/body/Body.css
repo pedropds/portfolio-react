@@ -6,3 +6,15 @@
 .dark-theme {
   color: #D3D3D3;
 }
+
+.header-text {
+  font-size: 7rem;
+}
+
+.description-text {
+  font-size: 2rem;
+  width: 60vh;
+  min-width: 40rem;
+  max-width: 70rem;
+  text-align: justify;
+}
