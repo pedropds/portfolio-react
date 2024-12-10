@@ -1,7 +1,13 @@
 .skill-component {
+  padding: 2rem 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 75%;
+  z-index: 0; /* Ensure parent does not conflict with child elements */
 }
 
 .skill-list.dark-theme {
@@ -21,6 +27,7 @@
   color: #1e293b;
   border-radius: 0.25rem;
   cursor: pointer;
+  z-index: 1; /* Ensure tooltip is layered correctly above this */
   user-select: none; /* Prevent text selection on click */
 }
 
@@ -39,14 +46,15 @@
   color: #D3D3D3;
   border-radius: 0.25rem;
   white-space: nowrap;
-  z-index: 100;
   font-size: 0.75rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+  width: 25vh;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Ensure long words break properly */
+  z-index: 10; /* Higher than .skill-element */
 }
 
 .tooltip.dark-theme {
   background-color: #D3D3D3;
   color: #1e293b;
 }
-
-

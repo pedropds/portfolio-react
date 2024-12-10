@@ -57,7 +57,103 @@ export const timelineData = [
 export const skills = [
   {
     name: "Java",
-    description:
-      "Most of my experience has involved Java. It's a language that has a special place in my heart, since it was the first coding language I've learned",
+    description: `
+      Most of my experience has involved Java. 
+      It's a language that has a special place in my heart, since it was the first coding language I've learned.
+      I've done a lot with Java, from creating simple API's to developing multithreaded kafka consumers.`,
+  },
+  {
+    name: "TypeScript",
+    description: `I Used TypeScript quite a lot throughout my carreer, mainly in frontend technologies, such as Angular and React, 
+      but I also played with NodeJS for some backend prototypes. It is a language I've really come to enjoy`,
+  },
+  {
+    name: "JavaScript",
+    description: `It's been rare to use pure JavaScript on my life. I preffer typed languages, sue me.`,
+  },
+  {
+    name: "Go",
+    description: `
+      Autodidact, I just learned this language because I wanted to see how it worked and what were the benefits of using it.
+      The work done for this was for a Messenger clone, where the backend was written in Go, coding stuff like a REST API and websockets.
+    `,
+  },
+  {
+    name: "Kotlin",
+    description: `I briefly used Kotlin for some API work related tasks, on my brief time at Siemens.`,
+  },
+  {
+    name: "C++",
+    description: `All of my C++ experience has come from Microsoft, mainly dealing with Office 365 products.
+      It isn't my go to language, as I find it extremely easy to shoot yourself in the foot with it.`,
+  },
+  {
+    name: "C",
+  },
+  {
+    name: "Rust",
+    description: `Just like Go I mainly used this language with the intent of learning it.`,
+  },
+  {
+    name: "Git",
+  },
+  {
+    name: "SQL",
+    description: `What sort of a backend developer hasn't used SQL for database purposes, like deleting the entire prod database, right?`,
+  },
+  {
+    name: "Quarkus",
+    description: `Or as I like to call it: the better version of Spring Boot.`,
+  },
+  {
+    name: "Spring Boot",
+  },
+  {
+    name: "React",
+  },
+  {
+    name: "Angular",
+    description: `I actually quite like Angular, contrary to most people.`,
+  },
+  {
+    name: "Docker",
+    description: `One of my best friends in the development world`,
+  },
+  {
+    name: "Kubernetes",
+    description: `As all developers, I have a love/hate relationship with this amazing tool, which can be very infuriating.`,
+  },
+  {
+    name: "Kafka",
+  },
+  {
+    name: "RabbitMQ",
+  },
+  {
+    name: "PostgreSQL",
+  },
+  {
+    name: "MongoDB",
+  },
+  {
+    name: "Node.js",
+  },
+  {
+    name: "GraphQL",
+  },
+  {
+    name: "Redis",
+  },
+  {
+    name: "NoSQL",
+  },
+  {
+    name: "OOP",
+  },
+  {
+    name: "Microservices",
+  },
+  {
+    name: "Distributed Systems",
   },
 ];
