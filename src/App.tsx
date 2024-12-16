@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Header } from "./components/header/Header";
 import { AboutMe } from "./components/about-me/AboutMe";
+import { HomePage } from "./components/home-page/HomePage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -33,7 +34,10 @@ function App() {
       {/* Pass only theme state to Header and Body */}
       <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route
+          path="/"
+          element={<HomePage isDarkTheme={isDarkTheme}></HomePage>}
+        />
         <Route
           path="/aboutme"
           element={<AboutMe isDarkTheme={isDarkTheme} />}

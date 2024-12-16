@@ -20,7 +20,7 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 10); // Delay for 10ms to ensure the transition occurs
+    }, 10);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,17 +31,21 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   };
 
   const handleNavigation = (path: string) => {
-    navigate(path);
+    const themeQuery = `isDarkTheme=${isDarkTheme}`;
+    navigate(`${path}?${themeQuery}`);
   };
 
   return (
     <div className="header">
       <div className="middle-header">
-        <div className="header-element" onClick={() => handleNavigation("/")}>
+        <div
+          className="header-element nav"
+          onClick={() => handleNavigation("/")}
+        >
           Home
         </div>
         <div
-          className="header-element"
+          className="header-element nav"
           onClick={() => handleNavigation("/aboutme")}
         >
           About me

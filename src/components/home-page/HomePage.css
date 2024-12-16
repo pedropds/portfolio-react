@@ -1,0 +1,33 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-element {
+  text-align: center;
+  align-self: center;
+  transition: color 0.5s ease; /* Transition for background color */
+}
+
+.header-text {
+  font-size: 3rem;
+  color: #1e293b;
+}
+
+.header-text.smaller {
+  font-size: 2rem;
+}
+
+.description-text {
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  width: 60vh;
+  min-width: 40rem;
+  max-width: 70rem;
+  text-align: justify;
+  color: #1e293b;
+}
+
+.dark-theme {
+  color: #D3D3D3;
+}

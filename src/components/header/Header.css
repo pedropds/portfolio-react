@@ -1,4 +1,5 @@
 .header {
+  height: 4vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +40,7 @@
   display: flex;
   align-items: center;
   opacity: 1;
+  padding-right: 2px;
 }
 
 .middle-header {
@@ -50,6 +52,11 @@
 .header-element {
   margin: 0 5px;
   cursor: pointer;
+}
+
+.nav {
+  padding: 0rem 0.5rem;
+  font-size: 1.25rem;
 }
 
 a {

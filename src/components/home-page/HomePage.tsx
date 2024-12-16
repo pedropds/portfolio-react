@@ -1,22 +1,26 @@
-import React from "react";
-import "./AboutMe.css";
-import { MyTimeline } from "./timeline/Timeline";
-import { skills, timelineData } from "./BodyConsts";
-import { Skills } from "./skills/Skills";
+import React, { useEffect, useState } from "react";
+import "./HomePage.css";
 
-interface AboutMeProps {
+interface HomePageProps {
   isDarkTheme: boolean;
 }
 
-export const AboutMe = ({ isDarkTheme }: AboutMeProps) => {
+export const HomePage = ({ isDarkTheme }: HomePageProps) => {
   return (
-    <div className={`body ${isDarkTheme ? "dark-theme" : ""}`}>
+    <div className="home-page-container">
       <header
         className={`text-element header-text ${
           isDarkTheme ? "dark-theme" : ""
         }`}
       >
-        About me
+        Pedro Sousa
+      </header>
+      <header
+        className={`text-element header-text smaller ${
+          isDarkTheme ? "dark-theme" : ""
+        }`}
+      >
+        Software Craftsman and Enthusiast
       </header>
       <span
         className={`text-element description-text ${
@@ -29,8 +33,6 @@ export const AboutMe = ({ isDarkTheme }: AboutMeProps) => {
         enhancing full-stack solutions using technologies like C++, TypeScript,
         JavaScript, and React.
       </span>
-      <Skills isDarkTheme={isDarkTheme} skills={skills}></Skills>
-      <MyTimeline items={timelineData} isDarkTheme={isDarkTheme} />
     </div>
   );
 };
