@@ -1,14 +1,14 @@
 import React from "react";
-import "./Body.css";
+import "./AboutMe.css";
 import { MyTimeline } from "./timeline/Timeline";
 import { skills, timelineData } from "./BodyConsts";
 import { Skills } from "./skills/Skills";
 
-interface BodyProps {
+interface AboutMeProps {
   isDarkTheme: boolean;
 }
 
-export const Body = ({ isDarkTheme }: BodyProps) => {
+export const AboutMe = ({ isDarkTheme }: AboutMeProps) => {
   return (
     <div className={`body ${isDarkTheme ? "dark-theme" : ""}`}>
       <header
@@ -16,7 +16,7 @@ export const Body = ({ isDarkTheme }: BodyProps) => {
           isDarkTheme ? "dark-theme" : ""
         }`}
       >
-        Pedro Sousa
+        About me
       </header>
       <span
         className={`text-element description-text ${

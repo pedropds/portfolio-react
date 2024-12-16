@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Header } from "./components/header/Header";
-import { Body } from "./components/body/Body";
+import { AboutMe } from "./components/about-me/AboutMe";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   // Get query parameter to set initial theme
@@ -31,7 +32,13 @@ function App() {
     <div className={`App ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       {/* Pass only theme state to Header and Body */}
       <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
-      <Body isDarkTheme={isDarkTheme} />
+      <Routes>
+        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route
+          path="/aboutme"
+          element={<AboutMe isDarkTheme={isDarkTheme} />}
+        />
+      </Routes>
     </div>
   );
 }

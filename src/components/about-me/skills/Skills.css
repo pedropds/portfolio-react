@@ -1,4 +1,7 @@
 .skill-component {
+  width: 60vh;
+  min-width: 40rem;
+  max-width: 70rem !important;
   padding: 2rem 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +51,8 @@
   white-space: nowrap;
   font-size: 0.75rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  width: 25vh;
+  max-width: 25vh;
+  width: max-content;
   white-space: normal; /* Allow text to wrap */
   word-wrap: break-word; /* Ensure long words break properly */
   z-index: 10; /* Higher than .skill-element */

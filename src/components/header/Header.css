@@ -1,13 +1,15 @@
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .linkedin-image-container {
   position: relative;
-  width: 50px; 
-  height: 50px; 
+  width: 35px; 
+  height: 35px; 
 }
 
 .linkedin-image {
@@ -36,18 +38,17 @@
 .right-header {
   display: flex;
   align-items: center;
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
 }
 
-.right-header.move-in {
-  transform: translateX(0);
-  opacity: 1; 
+.middle-header {
+  display: flex;
+  align-items: center;
+  opacity: 1;
 }
 
 .header-element {
-  margin: 0 10px;
+  margin: 0 5px;
   cursor: pointer;
 }
 

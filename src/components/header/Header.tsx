@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 import LinkedInWhite from "../../images/linkedin-white.svg";
 import LinkedInBlack from "../../images/linkedin-black.svg";
@@ -14,6 +15,7 @@ interface HeaderProps {
 export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   const [isRotated, setIsRotated] = useState<boolean>(false); // Rotation state
   const [isLoaded, setIsLoaded] = useState<boolean>(false); // isLoaded state
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,9 +30,24 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
     setIsRotated((prevRotated) => !prevRotated);
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="header">
-      <div className={`right-header ${isLoaded ? "move-in" : ""}`}>
+      <div className="middle-header">
+        <div className="header-element" onClick={() => handleNavigation("/")}>
+          Home
+        </div>
+        <div
+          className="header-element"
+          onClick={() => handleNavigation("/aboutme")}
+        >
+          About me
+        </div>
+      </div>
+      <div className="right-header">
         <a
           href="https://www.linkedin.com/in/pedropds/"
           target="_blank"
