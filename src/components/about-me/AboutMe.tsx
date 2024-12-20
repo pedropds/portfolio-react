@@ -10,7 +10,7 @@ interface AboutMeProps {
 
 export const AboutMe = ({ isDarkTheme }: AboutMeProps) => {
   return (
-    <div className={`body ${isDarkTheme ? "dark-theme" : ""}`}>
+    <div className="about-me-container">
       <header
         className={`text-element header-text ${
           isDarkTheme ? "dark-theme" : ""

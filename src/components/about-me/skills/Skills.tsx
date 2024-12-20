@@ -58,17 +58,12 @@ export const Skills = ({ skills, isDarkTheme }: SkillProps) => {
           }}
         >
           <div
-            className={`skill-element ${
-              isDarkTheme ? "dark-theme" : "light-theme"
-            }`}
+            className={`skill-element ${isDarkTheme ? "dark-theme" : ""} ${
+              clickedSkill == skill.name ? "clicked" : ""
+            } `}
             onClick={() => {
               toggleTooltip(skill.name);
               handleSkillClick(skill.name);
-            }}
-            style={{
-              transform:
-                clickedSkill === skill.name ? "scale(1.1)" : "scale(1)",
-              transition: "transform 0.2s ease", // Smooth scale transition
             }}
           >
             <span>{skill.name}</span>

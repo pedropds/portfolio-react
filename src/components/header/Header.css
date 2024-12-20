@@ -5,6 +5,12 @@
   align-items: center;
   position: sticky;
   top: 0;
+  background-color: #D3D3D3;
+  transition: background-color 0.5s ease; /* Transition for background color */
+}
+
+.header.dark {
+  background-color: #1e293b;
 }
 
 .linkedin-image-container {

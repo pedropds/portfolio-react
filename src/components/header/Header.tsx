@@ -36,7 +36,7 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   };
 
   return (
-    <div className="header">
+    <div className={`header ${isDarkTheme ? "dark" : ""}`}>
       <div className="middle-header">
         <div
           className={`header-element nav ${isDarkTheme ? "dark" : ""}`}

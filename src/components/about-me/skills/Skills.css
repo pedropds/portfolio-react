@@ -11,6 +11,7 @@
   justify-content: space-around;
   max-width: 75%;
   z-index: 0; /* Ensure parent does not conflict with child elements */
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .skill-list.dark-theme {
@@ -32,6 +33,12 @@
   cursor: pointer;
   z-index: 1; /* Ensure tooltip is layered correctly above this */
   user-select: none; /* Prevent text selection on click */
+  transition: transform 0.2s ease, background-color 0.5s ease, color 0.5s ease;
+  transform: scale(1); /* Use transform consistently */
+}
+
+.skill-element.clicked {
+  transform: scale(1.1); /* Apply scale transformation here */
 }
 
 .skill-element.dark-theme {
