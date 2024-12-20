@@ -1,7 +1,7 @@
 .skill-component {
-  width: 60vh;
-  min-width: 40rem;
-  max-width: 70rem !important;
+  width: 80%;
+  max-width: 50rem !important;
+  align-self: center;
   padding: 2rem 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +30,7 @@
   border: 0.125rem solid #1e293b;
   color: #1e293b;
   border-radius: 0.25rem;
+  font-size: 1.4rem;
   cursor: pointer;
   z-index: 1; /* Ensure tooltip is layered correctly above this */
   user-select: none; /* Prevent text selection on click */
@@ -56,7 +57,7 @@
   color: #D3D3D3;
   border-radius: 0.25rem;
   white-space: nowrap;
-  font-size: 0.75rem;
+  font-size: 1rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
   max-width: 25vh;
   width: max-content;
@@ -68,4 +69,11 @@
 .tooltip.dark-theme {
   background-color: #D3D3D3;
   color: #1e293b;
+}
+
+/* Support for smaller screens like phones */
+@media (max-width: 650px) {
+  .skill-element {
+    font-size: 1rem;
+  }
 }

@@ -13,7 +13,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
-  const [isRotated, setIsRotated] = useState<boolean>(false); // Rotation state
+  const [isRotated, setIsRotated] = useState<boolean>(isDarkTheme); // Rotation state
   const [isLoaded, setIsLoaded] = useState<boolean>(false); // isLoaded state
   const navigate = useNavigate(); // Initialize useNavigate
 

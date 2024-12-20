@@ -69,7 +69,7 @@ export const skills = [
   },
   {
     name: "JavaScript",
-    description: `It's been rare to use pure JavaScript on my life. I preffer typed languages, sue me.`,
+    description: `It's been rare to use pure JavaScript on my life. I prefer typed languages, sue me.`,
   },
   {
     name: "Go",
@@ -81,6 +81,10 @@ export const skills = [
   {
     name: "Kotlin",
     description: `I briefly used Kotlin for some API work related tasks, on my brief time at Siemens.`,
+  },
+  {
+    name: "Python",
+    description: `Used it extensively in my internship at B2F, for machine learning and data processing. Also used Python and Django more recently at IBM.`,
   },
   {
     name: "C++",

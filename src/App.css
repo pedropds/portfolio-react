@@ -30,6 +30,7 @@
   flex-wrap: wrap;
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
+  min-width: 20rem;
 }
 
 @font-face {

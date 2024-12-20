@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
+import PhotoMe from "../../images/me.jpg";
 
 interface HomePageProps {
   isDarkTheme: boolean;
@@ -10,11 +11,7 @@ export const HomePage = ({ isDarkTheme }: HomePageProps) => {
     <div className="home-page-container">
       {/* Profile Image */}
       <div className="profile-image-container">
-        <img
-          src="/path-to-your-image.jpg" // Replace with the correct image path
-          alt="Pedro Sousa"
-          className="profile-image"
-        />
+        <img src={PhotoMe} alt="Pedro Sousa" className="profile-image" />
       </div>
 
       {/* Headers */}

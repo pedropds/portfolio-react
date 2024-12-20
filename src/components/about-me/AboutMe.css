@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  width: 100%;
 }
 
 .text-element {
@@ -17,13 +18,21 @@
 
 .description-text {
   font-size: 1.5rem;
-  width: 60vh;
-  min-width: 40rem;
-  max-width: 70rem;
+  width: 80%;
+  min-width: 10rem;
+  max-width: 50rem;
   text-align: justify;
   color: #1e293b;
 }
 
 .dark-theme {
   color: #D3D3D3;
+}
+
+/* Support for smaller screens like phones */
+@media (max-width: 650px) {
+
+  .description-text {
+    font-size: 1rem;
+  }
 }
