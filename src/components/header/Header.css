@@ -56,7 +56,13 @@
 
 .nav {
   padding: 0rem 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.25rem; 
+  color: #1e293b;
+  transition: color 0.5s ease; /* Transition for background color */
+}
+
+.nav.dark {
+  color: #D3D3D3;
 }
 
 a {

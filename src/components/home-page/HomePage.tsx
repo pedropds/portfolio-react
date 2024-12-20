@@ -8,6 +8,16 @@ interface HomePageProps {
 export const HomePage = ({ isDarkTheme }: HomePageProps) => {
   return (
     <div className="home-page-container">
+      {/* Profile Image */}
+      <div className="profile-image-container">
+        <img
+          src="/path-to-your-image.jpg" // Replace with the correct image path
+          alt="Pedro Sousa"
+          className="profile-image"
+        />
+      </div>
+
+      {/* Headers */}
       <header
         className={`text-element header-text ${
           isDarkTheme ? "dark-theme" : ""
@@ -22,6 +32,8 @@ export const HomePage = ({ isDarkTheme }: HomePageProps) => {
       >
         Software Craftsman and Enthusiast
       </header>
+
+      {/* Description */}
       <span
         className={`text-element description-text ${
           isDarkTheme ? "dark-theme" : ""

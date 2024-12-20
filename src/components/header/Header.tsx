@@ -31,7 +31,7 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   };
 
   const handleNavigation = (path: string) => {
-    const themeQuery = `isDarkTheme=${isDarkTheme}`;
+    const themeQuery = `is-dark-theme=${isDarkTheme}`;
     navigate(`${path}?${themeQuery}`);
   };
 
@@ -39,13 +39,13 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
     <div className="header">
       <div className="middle-header">
         <div
-          className="header-element nav"
+          className={`header-element nav ${isDarkTheme ? "dark" : ""}`}
           onClick={() => handleNavigation("/")}
         >
           Home
         </div>
         <div
-          className="header-element nav"
+          className={`header-element nav ${isDarkTheme ? "dark" : ""}`}
           onClick={() => handleNavigation("/aboutme")}
         >
           About me

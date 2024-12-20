@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   // Get query parameter to set initial theme
   const queryParams = new URLSearchParams(window.location.search);
-  const isDarkThemeUrl = queryParams.get("isDarkTheme");
+  const isDarkThemeUrl = queryParams.get("is-dark-theme");
 
   // Set initial state based on the URL query parameter
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(
@@ -22,7 +22,7 @@ function App() {
 
       // Update the URL query parameter to reflect the new theme state
       const url = new URL(window.location.href);
-      url.searchParams.set("isDarkTheme", newTheme ? "true" : "false");
+      url.searchParams.set("is-dark-theme", newTheme ? "true" : "false");
       window.history.pushState({}, "", url.toString()); // Update the URL without reloading the page
 
       return newTheme;
@@ -33,16 +33,18 @@ function App() {
     <div className={`App ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       {/* Pass only theme state to Header and Body */}
       <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
-      <Routes>
-        <Route
-          path="/"
-          element={<HomePage isDarkTheme={isDarkTheme}></HomePage>}
-        />
-        <Route
-          path="/aboutme"
-          element={<AboutMe isDarkTheme={isDarkTheme} />}
-        />
-      </Routes>
+      <div className="body">
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage isDarkTheme={isDarkTheme}></HomePage>}
+          />
+          <Route
+            path="/aboutme"
+            element={<AboutMe isDarkTheme={isDarkTheme} />}
+          />
+        </Routes>
+      </div>
     </div>
   );
 }

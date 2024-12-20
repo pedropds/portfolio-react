@@ -10,13 +10,26 @@
   background-color: #1e293b;
 }
 
+.header {
+  flex: 0 0 auto; /* Ensure the header stays at the top */
+  text-align: center; /* Center content horizontally */
+  padding: 10px 20px; /* Add padding for spacing */
+  background-color: var(--header-bg-color, transparent); /* Optional: Customize header background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for separation */
+  z-index: 10; /* Ensure it stays above content */
+}
+
+
 .body {
+  flex: 1;
   flex-grow: 1; /* Makes sure Body takes up the remaining space */
   height: 100%; /* Optional: Ensure Body takes the full height of the container */
   display: flex;
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 }
 
 @font-face {
