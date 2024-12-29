@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import PhotoMe from "../../images/me.jpg";
+import { LoadingPage } from "../loading-screen/LoadingPage";
+import useLoading from "../../custom-hooks/UseLoading";
 
 interface HomePageProps {
   isDarkTheme: boolean;
 }
 
 export const HomePage = ({ isDarkTheme }: HomePageProps) => {
+  const isLoading = useLoading(500);
+
+  if (isLoading) {
+    return <LoadingPage isDarkTheme={isDarkTheme}></LoadingPage>;
+  }
+
   return (
     <div className="home-page-container">
       {/* Profile Image */}
@@ -37,10 +45,8 @@ export const HomePage = ({ isDarkTheme }: HomePageProps) => {
         }`}
       >
         I am Pedro Sousa, a Software Engineer with a passion for continuous
-        learning and innovation. Currently working at Microsoft, I contribute as
-        part of the Feedback team for Office 365, specializing in developing and
-        enhancing full-stack solutions using technologies like C++, TypeScript,
-        JavaScript, and React.
+        learning and innovation. Currently at Microsoft, I love building
+        software and contributing to impactful solutions.
       </span>
     </div>
   );
