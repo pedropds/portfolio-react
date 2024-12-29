@@ -4,10 +4,10 @@ const useLoading = (delay: number) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), delay);
+    const timer = setTimeout(() => setIsLoading(false), 500);
 
-    return () => clearTimeout(timer);
-  }, [delay]);
+    return () => clearTimeout(timer); // Clean up on unmount
+  }, []);
 
   return isLoading;
 };

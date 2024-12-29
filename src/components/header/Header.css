@@ -13,13 +13,13 @@
   background-color: #1e293b;
 }
 
-.linkedin-image-container {
+.image-container {
   position: relative;
   width: 35px; 
   height: 35px; 
 }
 
-.linkedin-image {
+.image {
   position: absolute;
   top: 0;
   left: 0;

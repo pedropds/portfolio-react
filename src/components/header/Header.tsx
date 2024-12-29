@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 import LinkedInWhite from "../../images/linkedin-white.svg";
 import LinkedInBlack from "../../images/linkedin-black.svg";
+import GithubWhite from "../../images/github-light.svg";
+import GithubDark from "../../images/github-dark.svg";
 import DarkThemeColor from "../../images/color-theme-dark.svg";
 import LightThemeColor from "../../images/color-theme-light.svg";
 
@@ -14,16 +16,7 @@ interface HeaderProps {
 
 export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   const [isRotated, setIsRotated] = useState<boolean>(isDarkTheme); // Rotation state
-  const [isLoaded, setIsLoaded] = useState<boolean>(false); // isLoaded state
   const navigate = useNavigate(); // Initialize useNavigate
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 10);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleToggle = () => {
     toggleTheme();
@@ -58,21 +51,35 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
           rel="noopener noreferrer"
           className="header-element"
         >
-          {/* LinkedIn Images Overlay */}
-          <div className="linkedin-image-container">
+          <div className="image-container">
             <img
               src={LinkedInBlack}
               alt="LinkedIn"
-              className={`linkedin-image ${
-                !isDarkTheme ? "fade-out" : "fade-in"
-              }`}
+              className={`image ${!isDarkTheme ? "fade-out" : "fade-in"}`}
             />
             <img
               src={LinkedInWhite}
               alt="LinkedIn"
-              className={`linkedin-image ${
-                isDarkTheme ? "fade-out" : "fade-in"
-              }`}
+              className={`image ${isDarkTheme ? "fade-out" : "fade-in"}`}
+            />
+          </div>
+        </a>
+        <a
+          href="https://github.com/pedropds"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="header-element"
+        >
+          <div className="image-container">
+            <img
+              src={GithubDark}
+              alt="LinkedIn"
+              className={`image ${!isDarkTheme ? "fade-out" : "fade-in"}`}
+            />
+            <img
+              src={GithubWhite}
+              alt="LinkedIn"
+              className={`image ${isDarkTheme ? "fade-out" : "fade-in"}`}
             />
           </div>
         </a>
