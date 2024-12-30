@@ -23,7 +23,7 @@ function App() {
       // Update the URL query parameter to reflect the new theme state
       const url = new URL(window.location.href);
       url.searchParams.set("is-dark-theme", newTheme ? "true" : "false");
-      window.history.pushState({}, "", url.toString()); // Update the URL without reloading the page
+      window.history.pushState({}, "", url.toString());
 
       return newTheme;
     });
