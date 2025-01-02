@@ -5,7 +5,7 @@
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   transition: background-color 0.5s ease; /* Transition for background color */
 }
 
@@ -13,10 +13,19 @@
   background-color: #1e293b;
 }
 
+.header-element.nav.active {
+  transition: border-bottom 0.5s ease; /* Transition for background color */
+  border-bottom: 2px solid #1e293b;
+}
+
+.header-element.nav.dark.active {
+  border-bottom: 2px solid #d3d3d3;
+}
+
 .image-container {
   position: relative;
-  width: 35px; 
-  height: 35px; 
+  width: 35px;
+  height: 35px;
 }
 
 .image {
@@ -62,13 +71,13 @@
 
 .nav {
   padding: 0rem 0.5rem;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: #1e293b;
   transition: color 0.5s ease; /* Transition for background color */
 }
 
 .nav.dark {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 a {

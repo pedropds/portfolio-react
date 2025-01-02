@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 
 import LinkedInWhite from "../../images/linkedin-white.svg";
 import LinkedInBlack from "../../images/linkedin-black.svg";
@@ -17,6 +17,7 @@ interface HeaderProps {
 export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
   const [isRotated, setIsRotated] = useState<boolean>(isDarkTheme); // Rotation state
   const navigate = useNavigate(); // Initialize useNavigate
+  const location = useLocation();
 
   const handleToggle = () => {
     toggleTheme();
@@ -32,13 +33,17 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
     <div className={`header ${isDarkTheme ? "dark" : ""}`}>
       <div className="middle-header">
         <div
-          className={`header-element nav ${isDarkTheme ? "dark" : ""}`}
+          className={`header-element nav ${isDarkTheme ? "dark" : ""} ${
+            location.pathname === "/" ? "active" : ""
+          }`}
           onClick={() => handleNavigation("/")}
         >
           Home
         </div>
         <div
-          className={`header-element nav ${isDarkTheme ? "dark" : ""}`}
+          className={`header-element nav ${isDarkTheme ? "dark" : ""} ${
+            location.pathname === "/aboutme" ? "active" : ""
+          }`}
           onClick={() => handleNavigation("/aboutme")}
         >
           About me
