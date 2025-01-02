@@ -48,6 +48,14 @@ export const Header = ({ isDarkTheme, toggleTheme }: HeaderProps) => {
         >
           About me
         </div>
+        <div
+          className={`header-element nav ${isDarkTheme ? "dark" : ""} ${
+            location.pathname === "/projects" ? "active" : ""
+          }`}
+          onClick={() => handleNavigation("/projects")}
+        >
+          Projects
+        </div>
       </div>
       <div className="right-header">
         <a

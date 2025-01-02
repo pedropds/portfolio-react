@@ -1,0 +1,33 @@
+.projects-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 90%;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1e293b;
+}
+
+.arrow.dark {
+  color: #d3d3d3;
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.projects-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.projects-inner {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}

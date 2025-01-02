@@ -1,3 +1,4 @@
+/* General header styles */
 .header {
   height: 4vh;
   display: flex;
@@ -6,22 +7,54 @@
   position: sticky;
   top: 0;
   background-color: #d3d3d3;
-  transition: background-color 0.5s ease; /* Transition for background color */
+  transition: background-color 0.5s ease;
 }
 
 .header.dark {
   background-color: #1e293b;
 }
 
-.header-element.nav.active {
-  transition: border-bottom 0.5s ease; /* Transition for background color */
+/* Navigation elements */
+.nav {
+  margin: 0 5px;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav.dark {
+  color: #d3d3d3;
+}
+
+.nav.active {
   border-bottom: 2px solid #1e293b;
 }
 
-.header-element.nav.dark.active {
+.nav.dark.active {
   border-bottom: 2px solid #d3d3d3;
 }
 
+/* Right and middle header layout */
+.right-header,
+.middle-header {
+  display: flex;
+  align-items: center;
+  padding-right: 2px;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle.rotated {
+  transform: rotate(180deg);
+}
+
+/* Image container and images */
 .image-container {
   position: relative;
   width: 35px;
@@ -43,50 +76,10 @@
   opacity: 0;
 }
 
-.theme-toggle {
-  transition: transform 0.5s ease;
-}
-
-.rotated {
-  transform: rotate(180deg);
-}
-
-.right-header {
-  display: flex;
-  align-items: center;
-  opacity: 1;
-  padding-right: 2px;
-}
-
-.middle-header {
-  display: flex;
-  align-items: center;
-  opacity: 1;
-}
-
-.header-element {
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.nav {
-  padding: 0rem 0.5rem;
-  font-size: 1.5rem;
-  color: #1e293b;
-  transition: color 0.5s ease; /* Transition for background color */
-}
-
-.nav.dark {
-  color: #d3d3d3;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-}
-
+/* Links and images */
+a,
 img {
   margin: 0;
   padding: 0;
-  display: block; /* Prevents inline spacing issues */
+  display: block;
 }

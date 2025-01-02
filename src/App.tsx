@@ -4,6 +4,7 @@ import { Header } from "./components/header/Header";
 import { AboutMe } from "./components/about-me/AboutMe";
 import { HomePage } from "./components/home-page/HomePage";
 import { Routes, Route } from "react-router-dom";
+import { Projects } from "./components/projects/Projects";
 
 function App() {
   // Get query parameter to set initial theme
@@ -42,6 +43,10 @@ function App() {
           <Route
             path="/aboutme"
             element={<AboutMe isDarkTheme={isDarkTheme} />}
+          />
+          <Route
+            path="/projects"
+            element={<Projects isDarkTheme={isDarkTheme} />}
           />
         </Routes>
       </div>

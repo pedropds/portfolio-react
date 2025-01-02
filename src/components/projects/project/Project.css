@@ -1,0 +1,38 @@
+.project {
+  flex: 0 0 50%; /* Show 2 projects per row */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  display: flex;
+  justify-content: center;
+}
+
+.project-thumbnail {
+  max-width: 100%; /* Ensure the image doesn't overflow the container */
+  max-height: 25rem; /* Limit the height */
+  object-fit: cover; /* Keep aspect ratio and fill the available space */
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Dark theme styles for thumbnails */
+.project-thumbnail.dark {
+  filter: brightness(0.8); /* Darker tone for dark theme */
+}
+
+.project-description {
+  padding: 1rem 0rem;
+  text-align: center;
+}
