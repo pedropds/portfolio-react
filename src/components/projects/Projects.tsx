@@ -6,6 +6,7 @@ import { LoadingPage } from "../loading-screen/LoadingPage";
 import project1Image1 from "../../images/me.jpg";
 import project1Image2 from "../../images/me.jpg";
 import project2Image1 from "../../images/me.jpg";
+import image3 from "../../images/github-light.svg";
 import { Dialog } from "./dialog/Dialog";
 import Project from "./project/Project";
 // Add more imports as needed
@@ -21,7 +22,7 @@ const projectsData = [
     id: 2,
     title: "Project 2",
     description: "Description for Project 2",
-    images: [project2Image1],
+    images: [project2Image1, image3],
   },
   {
     id: 3,
