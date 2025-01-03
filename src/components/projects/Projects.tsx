@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./Projects.css";
 import useLoading from "../../custom-hooks/UseLoading";
 import { LoadingPage } from "../loading-screen/LoadingPage";
@@ -49,7 +49,7 @@ export const Projects = ({ isDarkTheme }: ProjectsProps) => {
     return <LoadingPage isDarkTheme={isDarkTheme}></LoadingPage>;
   }
 
-  const totalPages = Math.ceil(projectsData.length / 2);
+  const totalPages = projectsData.length;
 
   const handlePrev = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
   const handleNext = () =>
@@ -73,45 +73,74 @@ export const Projects = ({ isDarkTheme }: ProjectsProps) => {
     );
 
   return (
-    <div className={`projects-container ${isDarkTheme ? "dark" : ""}`}>
-      <button
-        className={`arrow ${isDarkTheme ? "dark" : ""} left-arrow`}
-        onClick={handlePrev}
-        disabled={currentIndex === 0}
-      >
-        &lt;
-      </button>
-      <div className={`projects-wrapper ${isDarkTheme ? "dark" : ""}`}>
-        <div
-          className="projects-inner"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+    <div className="projects-wrapper">
+      <div className="project-description-wrapper">
+        <header
+          className={`text-element header-text ${
+            isDarkTheme ? "dark-theme" : ""
+          }`}
         >
-          {projectsData.map((project) => (
-            <Project
-              key={project.id}
-              project={project}
-              isDarkTheme={isDarkTheme}
-              openDialog={openDialog}
-            />
-          ))}
-        </div>
+          Projects
+        </header>
+        <span
+          className={`text-element description-text ${
+            isDarkTheme ? "dark-theme" : ""
+          }`}
+        >
+          I am Pedro Sousa, a Software Engineer with a passion for continuous
+          learning and innovation. Currently working at Microsoft, I contribute
+          as part of the Feedback team for Office 365, specializing in
+          developing and enhancing full-stack solutions using technologies like
+          C++, TypeScript, JavaScript, and React. Most of my professional
+          experience has been as a web developer, where I honed my skills in
+          crafting scalable, user-friendly applications that deliver real-world
+          value. However, I am always eager to step out of my comfort zone and
+          embrace new challenges, whether it’s exploring emerging technologies,
+          diving deeper into backend systems, or venturing into entirely new
+          domains of software development.
+        </span>
       </div>
-      <button
-        className={`arrow ${isDarkTheme ? "dark" : ""} right-arrow`}
-        onClick={handleNext}
-        disabled={currentIndex === totalPages - 1}
-      >
-        &gt;
-      </button>
+      <div className={`projects-container ${isDarkTheme ? "dark" : ""}`}>
+        <button
+          className={`arrow ${isDarkTheme ? "dark" : ""} left-arrow`}
+          onClick={handlePrev}
+          disabled={currentIndex === 0}
+        >
+          &lt;
+        </button>
+        <div className={`projects-wrapper ${isDarkTheme ? "dark" : ""}`}>
+          <div
+            className="projects-inner"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {projectsData.map((project) => (
+              <Project
+                key={project.id}
+                project={project}
+                isDarkTheme={isDarkTheme}
+                openDialog={openDialog}
+              />
+            ))}
+          </div>
+        </div>
+        <button
+          className={`arrow ${isDarkTheme ? "dark" : ""} right-arrow`}
+          onClick={handleNext}
+          disabled={currentIndex === totalPages - 1}
+        >
+          &gt;
+        </button>
 
-      <Dialog
-        images={selectedImages}
-        currentImageIndex={currentImageIndex}
-        isOpen={dialogOpen}
-        onClose={closeDialog}
-        onPrev={handleDialogPrev}
-        onNext={handleDialogNext}
-      />
+        <Dialog
+          images={selectedImages}
+          currentImageIndex={currentImageIndex}
+          isOpen={dialogOpen}
+          onClose={closeDialog}
+          onPrev={handleDialogPrev}
+          onNext={handleDialogNext}
+          isDarkTheme={isDarkTheme}
+        />
+      </div>
     </div>
   );
 };

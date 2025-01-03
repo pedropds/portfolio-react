@@ -16,7 +16,7 @@
 /* Dialog Content */
 .dialog-content {
   position: relative;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   padding: 20px;
   border-radius: 8px;
   max-width: 90%;
@@ -78,8 +78,8 @@
   cursor: pointer;
 }
 
-.dialog-content.dark .dialog-arrow {
-  color: #fff;
+.dialog-arrow.dark {
+  color: #d3d3d3;
 }
 
 /* Disabled Arrows */

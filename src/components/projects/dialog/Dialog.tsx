@@ -8,6 +8,7 @@ interface DialogProps {
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
+  isDarkTheme: boolean;
 }
 
 export const Dialog = ({
@@ -17,6 +18,7 @@ export const Dialog = ({
   onClose,
   onPrev,
   onNext,
+  isDarkTheme,
 }: DialogProps) => {
   const dialogRef = useRef<HTMLDivElement>(null);
 
@@ -55,7 +57,7 @@ export const Dialog = ({
         <div className="dialog-wrapper">
           {images.length > 1 && (
             <button
-              className="dialog-arrow"
+              className={`dialog-arrow ${isDarkTheme ? "dark" : ""}`}
               onClick={onPrev}
               disabled={currentImageIndex === 0}
             >
@@ -69,7 +71,7 @@ export const Dialog = ({
           />
           {images.length > 1 && (
             <button
-              className="dialog-arrow"
+              className={`dialog-arrow ${isDarkTheme ? "dark" : ""}`}
               onClick={onNext}
               disabled={currentImageIndex === images.length - 1}
             >

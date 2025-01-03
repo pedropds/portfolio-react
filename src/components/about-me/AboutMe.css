@@ -9,6 +9,7 @@
   text-align: center;
   align-self: center;
   transition: color 0.5s ease; /* Transition for background color */
+  width: 80%;
 }
 
 .header-text {
@@ -23,6 +24,12 @@
   max-width: 50rem;
   text-align: justify;
   color: #1e293b;
+}
+
+.header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dark-theme {
