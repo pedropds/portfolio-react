@@ -26,12 +26,6 @@
   color: #1e293b;
 }
 
-.header-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .dark-theme {
   color: #d3d3d3;
 }

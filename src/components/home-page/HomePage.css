@@ -16,7 +16,8 @@
 }
 
 .header-text.smaller {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 2rem !important;
 }
 
 .description-text {
@@ -30,7 +31,7 @@
 }
 
 .dark-theme {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 .profile-image-container {
@@ -55,6 +56,6 @@
   }
   .profile-image {
     width: 15rem; /* Adjust the size as needed */
-    height: 15rem; 
+    height: 15rem;
   }
 }

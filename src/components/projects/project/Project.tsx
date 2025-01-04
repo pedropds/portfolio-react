@@ -9,7 +9,7 @@ interface ProjectProps {
     images: string[];
   };
   isDarkTheme: boolean;
-  openDialog: (images: string[]) => void;
+  openDialog?: (images: string[]) => void;
 }
 
 const Project = ({ project, isDarkTheme, openDialog }: ProjectProps) => {
@@ -21,7 +21,7 @@ const Project = ({ project, isDarkTheme, openDialog }: ProjectProps) => {
           src={project.images[0]}
           alt={`${project.title} thumbnail`}
           className={`project-thumbnail ${isDarkTheme ? "dark" : ""}`}
-          onClick={() => openDialog(project.images)}
+          /*onClick={() => openDialog(project.images)}*/
         />
       )}
       <span className="project-description">{project.description}</span>

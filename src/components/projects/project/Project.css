@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   padding: 1rem 0rem;
+  transition: color 0.5s ease;
 }
 
 .project-thumbnail {
@@ -35,6 +36,7 @@
 .project-description {
   padding: 1rem 0rem;
   text-align: center;
+  transition: color 0.5s ease;
 }
 
 .arrow {
