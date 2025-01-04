@@ -33,12 +33,11 @@
 }
 
 .dark-theme {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 /* Support for smaller screens like phones */
 @media (max-width: 650px) {
-
   .description-text {
     font-size: 1rem;
   }

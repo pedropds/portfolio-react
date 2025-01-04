@@ -7,6 +7,10 @@ import project1Image1 from "../../images/me.jpg";
 import project1Image2 from "../../images/me.jpg";
 import project2Image1 from "../../images/me.jpg";
 import image3 from "../../images/github-light.svg";
+import LeftArrow from "../../images/left-arrow-svgrepo-com.svg";
+import RightArrow from "../../images/right-arrow-svgrepo-com.svg";
+import LeftArrowDark from "../../images/left-arrow-svgrepo-com-dark.svg";
+import RightArrowDark from "../../images/right-arrow-svgrepo-com-dark.svg";
 import { Dialog } from "./dialog/Dialog";
 import Project from "./project/Project";
 // Add more imports as needed
@@ -82,22 +86,11 @@ export const Projects = ({ isDarkTheme }: ProjectsProps) => {
         >
           Projects
         </header>
-        <span
-          className={`text-element description-text ${
-            isDarkTheme ? "dark-theme" : ""
-          }`}
-        >
-          I am Pedro Sousa, a Software Engineer with a passion for continuous
-          learning and innovation. Currently working at Microsoft, I contribute
-          as part of the Feedback team for Office 365, specializing in
-          developing and enhancing full-stack solutions using technologies like
-          C++, TypeScript, JavaScript, and React. Most of my professional
-          experience has been as a web developer, where I honed my skills in
-          crafting scalable, user-friendly applications that deliver real-world
-          value. However, I am always eager to step out of my comfort zone and
-          embrace new challenges, whether it’s exploring emerging technologies,
-          diving deeper into backend systems, or venturing into entirely new
-          domains of software development.
+        <span className={`text-element ${isDarkTheme ? "dark-theme" : ""}`}>
+          I enjoy learning during my free time, as it allows me to explore
+          concepts beyond those encountered at work. Below are some personal
+          projects I’ve undertaken as a hobby and as an opportunity to expand my
+          knowledge."
         </span>
       </div>
       <div className={`projects-container ${isDarkTheme ? "dark" : ""}`}>
@@ -106,31 +99,48 @@ export const Projects = ({ isDarkTheme }: ProjectsProps) => {
           onClick={handlePrev}
           disabled={currentIndex === 0}
         >
-          &lt;
+          <img
+            src={LeftArrow}
+            className={`arrow-image ${isDarkTheme ? "fade-out" : "fade-in"}`}
+            alt="Previous"
+          />
+          <img
+            src={LeftArrowDark}
+            className={`arrow-image ${!isDarkTheme ? "fade-out" : "fade-in"}`}
+            alt="Previous"
+          />
         </button>
-        <div className={`projects-wrapper ${isDarkTheme ? "dark" : ""}`}>
-          <div
-            className="projects-inner"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {projectsData.map((project) => (
+        <div className="projects-inner">
+          {projectsData.map((project, index) => (
+            <div
+              key={project.id}
+              className={`project ${index !== currentIndex ? "disabled" : ""}`}
+            >
               <Project
-                key={project.id}
                 project={project}
                 isDarkTheme={isDarkTheme}
                 openDialog={openDialog}
               />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
         <button
           className={`arrow ${isDarkTheme ? "dark" : ""} right-arrow`}
           onClick={handleNext}
           disabled={currentIndex === totalPages - 1}
         >
-          &gt;
+          <img
+            src={RightArrow}
+            className={`arrow-image ${isDarkTheme ? "fade-out" : "fade-in"}`}
+            alt="Previous"
+          />
+          <img
+            src={RightArrowDark}
+            className={`arrow-image ${!isDarkTheme ? "fade-out" : "fade-in"}`}
+            alt="Previous"
+          />
         </button>
-
+        {/*
         <Dialog
           images={selectedImages}
           currentImageIndex={currentImageIndex}
@@ -140,6 +150,7 @@ export const Projects = ({ isDarkTheme }: ProjectsProps) => {
           onNext={handleDialogNext}
           isDarkTheme={isDarkTheme}
         />
+        */}
       </div>
     </div>
   );
