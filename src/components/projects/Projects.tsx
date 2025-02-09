@@ -3,38 +3,38 @@ import "./Projects.css";
 import useLoading from "../../custom-hooks/UseLoading";
 import { LoadingPage } from "../loading-screen/LoadingPage";
 
-import project1Image1 from "../../images/me.jpg";
-import project1Image2 from "../../images/me.jpg";
-import project2Image1 from "../../images/me.jpg";
-import image3 from "../../images/github-light.svg";
+import chatRoomRoom from "../../images/projects/go-chat-room.png";
+import daftWebScraper from "../../images/projects/daft-web-scraper.png";
+import dockerDevServices from "../../images/projects/docker-dev-services.png";
 import LeftArrow from "../../images/left-arrow-svgrepo-com.svg";
 import RightArrow from "../../images/right-arrow-svgrepo-com.svg";
 import LeftArrowDark from "../../images/left-arrow-svgrepo-com-dark.svg";
 import RightArrowDark from "../../images/right-arrow-svgrepo-com-dark.svg";
-import { Dialog } from "./dialog/Dialog";
 import Project from "./project/Project";
 // Add more imports as needed
 
 const projectsData = [
   {
     id: 1,
-    title: "Project 1",
-    description: "Description for Project 1",
-    images: [project1Image1, project1Image2],
+    title: "Go Chat Room",
+    description: "Messaging application inspired by WhatsApp",
+    image: chatRoomRoom,
+    link: "https://github.com/pedropds/go-chat-room",
   },
   {
     id: 2,
-    title: "Project 2",
-    description: "Description for Project 2",
-    images: [project2Image1, image3],
+    title: "Daft Web Scraper",
+    description: "A property web scraper based on Daft.ie",
+    image: daftWebScraper,
+    link: "https://github.com/pedropds/daft-web-scraper",
   },
   {
     id: 3,
-    title: "Project 3",
-    description: "Description for Project 3",
-    images: [],
+    title: "Docker Dev Services",
+    description: "Docker Services for every day-to-day use",
+    image: dockerDevServices,
+    link: "https://github.com/pedropds/docker-dev-services",
   },
-  // Add more projects as needed
 ];
 
 interface ProjectsProps {

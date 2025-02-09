@@ -6,22 +6,30 @@ interface ProjectProps {
     id: number;
     title: string;
     description: string;
-    images: string[];
+    image?: string;
+    link?: string;
   };
   isDarkTheme: boolean;
   openDialog?: (images: string[]) => void;
 }
 
 const Project = ({ project, isDarkTheme, openDialog }: ProjectProps) => {
+  const openLink = (link?: string) => {
+    if (!link) return;
+
+    // Open link in a new tab
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="project">
       <span className="project-title">{project.title}</span>
-      {project.images.length > 0 && (
+      {project.image && (
         <img
-          src={project.images[0]}
+          src={project.image}
           alt={`${project.title} thumbnail`}
           className={`project-thumbnail ${isDarkTheme ? "dark" : ""}`}
-          /*onClick={() => openDialog(project.images)}*/
+          onClick={() => openLink(project.link)}
         />
       )}
       <span className="project-description">{project.description}</span>

@@ -1,24 +1,28 @@
 .project {
+  max-height: 35rem;
+  display: flex;
   flex: 0 0 100%; /* Show 2 projects per row */
   padding: 1.25rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-content: center;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .project-title {
   display: flex;
   justify-content: center;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
+  font-size: 2rem;
   transition: color 0.5s ease;
 }
 
 .project-thumbnail {
-  max-width: 100%; /* Ensure the image doesn't overflow the container */
-  max-height: 25rem; /* Limit the height */
+  max-width: 90%;
+  max-height: 31rem; /* Limit the height */
   object-fit: cover; /* Keep aspect ratio and fill the available space */
   border-radius: 8px;
   cursor: pointer;
@@ -26,7 +30,7 @@
 }
 
 .project-thumbnail:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.02); /* Slight zoom effect on hover */
 }
 
 /* Dark theme styles for thumbnails */
@@ -38,6 +42,8 @@
   padding: 1rem 0rem;
   text-align: center;
   transition: color 0.5s ease;
+  font-size: 1.2rem;
+  max-width: 85%;
 }
 
 .arrow {
@@ -59,4 +65,10 @@
 
 .fade-out {
   opacity: 0;
+}
+
+@media (max-width: 650px) {
+  .project-title {
+    font-size: 1.8rem;
+  }
 }
